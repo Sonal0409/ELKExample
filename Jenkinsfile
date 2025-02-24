@@ -7,7 +7,7 @@ node {
 	}
 
 	stage('Build image') {
-		app = docker.build("${application}:${BUILD_NUMBER}")
+		sh 'docker build -t ${application}:${BUILD_NUMBER} .'
 	}
 
 
