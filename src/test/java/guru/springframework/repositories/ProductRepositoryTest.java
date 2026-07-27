@@ -31,11 +31,11 @@ public class ProductRepositoryTest {
         product.setPrice(new BigDecimal("18.95"));
         product.setProductId("1234");
 
-        //save product, verify has ID value after save
+        //save product, verify has ID value after save ...
         assertNull(product.getId()); //null before save
         productRepository.save(product);
         assertNotNull(product.getId()); //not null after save
-        //fetch from DB
+        //fetch from DB ..
         Product fetchedProduct = productRepository.findById(product.getId()).orElse(null);
 
         //should not be null
